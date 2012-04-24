@@ -33,6 +33,6 @@ public interface DependencyDomain extends Domain {
      * asynchronously. The result can be retrieved using the events raised by this domain, which also contain the id.
      */
     @Raises({ MergeSuccessEvent.class, MergeFailEvent.class })
-    void merge(OpenEngSBFileModel path);
+    void merge(OpenEngSBFileModel path, String dependencyLocation);
 }
 // @extract-end
