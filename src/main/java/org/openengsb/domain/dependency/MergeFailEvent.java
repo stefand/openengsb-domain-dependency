@@ -9,7 +9,8 @@ public class MergeFailEvent extends Event {
     public MergeFailEvent() {
     }
 
-    public MergeFailEvent(String output) {
+    public MergeFailEvent(long processId, String output) {
+        super(processId);
         this.output = output;
     }
 

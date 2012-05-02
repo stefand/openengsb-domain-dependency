@@ -8,11 +8,13 @@ public class MergeSuccessEvent extends Event {
     private String output;
     private OpenEngSBFileModel path;
 
-    public MergeSuccessEvent(OpenEngSBFileModel path) {
+    public MergeSuccessEvent(long processId, OpenEngSBFileModel path) {
+        super(processId);
         this.path = path;
     }
 
-    public MergeSuccessEvent(OpenEngSBFileModel path, String output) {
+    public MergeSuccessEvent(long processId, OpenEngSBFileModel path, String output) {
+        super(processId);
         this.path = path;
         this.output = output;
     }
